@@ -39,6 +39,10 @@ fn build_scores_table(results: String) -> HashMap<String, Team> {
         // will be the number of goals conceded from team_2, and similarly
         // goals scored by team_2 will be the number of goals conceded by
         // team_1.
+           // 更新队伍1的进球和失球数        
+           scores.entry(team_1_name).or_insert(Team { goals_scored: 0, goals_conceded: 0 }).goals_scored += team_1_score;        scores.entry(team_1_name).or_insert(Team { goals_scored: 0, goals_conceded: 0 }).goals_conceded += team_2_score;        
+           // 更新队伍2的进球和失球数        
+           scores.entry(team_2_name).or_insert(Team { goals_scored: 0, goals_conceded: 0 }).goals_scored += team_2_score;        scores.entry(team_2_name).or_insert(Team { goals_scored: 0, goals_conceded: 0 }).goals_conceded += team_1_score;    
     }
     scores
 }
