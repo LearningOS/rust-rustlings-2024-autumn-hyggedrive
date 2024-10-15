@@ -10,11 +10,11 @@
 
 // I AM NOT DONE
 
-fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
+fn longest(x: &str, y: &str) -> String {
     if x.len() > y.len() {
-        x
+        x.to_string()
     } else {
-        y
+        y.to_string()
     }
 }
 
