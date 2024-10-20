@@ -34,12 +34,13 @@
 // Execute `rustlings hint tests7` or use the `hint` watch subcommand for a
 // hint.
 
+mod build;
 
 fn main() {}
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+    //use super::*;
 
     #[test]
     fn test_success() {

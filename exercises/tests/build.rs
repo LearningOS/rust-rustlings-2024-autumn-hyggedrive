@@ -7,5 +7,5 @@ fn main() {
       .unwrap()
       .as_secs();
     env::set_var("TEST_FOO", timestamp.to_string());
-    println!("cargo:rerun - if - changed=build.rs");
+    println!("cargo:rustc-cfg=feature=\"pass\"");
 }
