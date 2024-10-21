@@ -1,3 +1,4 @@
+
 // tests7.rs
 //
 // When building packages, some dependencies can neither be imported in
@@ -34,13 +35,12 @@
 // Execute `rustlings hint tests7` or use the `hint` watch subcommand for a
 // hint.
 
-mod build;
 
 fn main() {}
 
 #[cfg(test)]
 mod tests {
-    //use super::*;
+    use super::*;
 
     #[test]
     fn test_success() {
